@@ -16,3 +16,16 @@ print('statsmodels: %s' % statsmodels.__version__)
 # scikit-learn
 import sklearn
 print('sklearn: %s' % sklearn.__version__)
+
+
+
+
+def factorial(x):
+	if x == 0:
+		return 0
+	elif x == 1:
+		return 1
+	else:
+		return (factorial(x-1) * x)
+
+print(factorial(5))
