@@ -1,16 +1,14 @@
-#longest word
+import re
 
-var = 'one two three'
-def LongestWord(sen):	
+def LongestWord(sen): 
+
+  sen = re.compile("[^a-zA-Z]")
+
+  # now we separate the string into a list of words
+  arr = sen.split(" ")
+
+  # the list max function will return the element in arr
+  # with the longest length because we specify key=len
+  return max(arr, key=len)
     
-    for word in sen.split():
-    	arr = []
-    	arr.append(word)
-    	#print(word)
-
-    # code goes here 
-    return arr
-
-
-# keep this function call here  
-print LongestWord(var)  
+print(LongestWord("the $$$longest# word is thisonemyguy"))
