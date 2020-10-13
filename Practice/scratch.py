@@ -8,3 +8,6 @@ print(type(int(n)))
 
 print(n)
 print(int(n))
+
+
+C:\Users\e2yrg\AppData\Local\Microsoft\WindowsApps
