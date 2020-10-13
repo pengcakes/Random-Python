@@ -35,3 +35,5 @@ C:\Users\e2yrg\AppData\Local\Microsoft\WindowsApps
 =======
 print("hello world")
 >>>>>>> Stashed changes
+
+C:\Users\e2yrg\AppData\Local\Microsoft\WindowsApps
