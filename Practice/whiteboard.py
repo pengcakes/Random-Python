@@ -1,6 +1,3 @@
-def func():
-    print('pls')
-
 def bruh(number):
     return number%2 == 0
 
@@ -13,16 +10,16 @@ def solutionN(number):
         return 0
 
     sum_list=[]
-    for x in range(0, number+1):
+    for x in range(0, int(number)+1):
         if x%3==0 or x%5==0:
             sum_list.append(x)
 
     return sum(sum_list)
 
-# def solution(number):
-#     return sum(x for x in range(number) if x % 3 == 0 or x % 5 == 0)
+def solutionN2(number):
+    return sum(x for x in range(number) if x % 3 == 0 or x % 5 == 0)
 
-
+""" O(1) """
 def solution1(number):
     a3 = (number-1)//3
     a5 = (number-1)//5
@@ -31,6 +28,13 @@ def solution1(number):
     return result
 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+import time
 
 if __name__ == "__main__":
-    print(solutionN(1000))
+    start = time.time()
+    print(solutionN(10000000))
+    print(solutionN2(10000000))
+    print(solution1(10000000))
+    end = time.time()
+    print(end - start)
