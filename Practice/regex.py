@@ -23,12 +23,25 @@ def remove_parentheses(s):
 
 
 def not_braindead(s):
-    
-    return
+    characters = [char for char in s]
+    new=[]
+    paren_count=0
+
+    for x in characters:
+        print(x, paren_count)
+        if x == "(":
+            paren_count+=1
+        elif x == ")":
+            paren_count-=1
+        elif paren_count == 0:
+            new.append(x)
+
+    return "".join(new)
 
 
 if __name__ == "__main__":
     # print(remove_parentheses("example(unwanted thing)example"))
     # print(remove_parentheses("a(b(c))"))
-    print(remove_parentheses("hello example (words(more words) here) something"))
+    # print(remove_parentheses("hello example (words(more words) here) something"))
     # print(remove_parentheses("(first group) (second group) (third group)"))
+    print(not_braindead("hello example (words(more words) here) something"))
