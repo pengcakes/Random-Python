@@ -11,7 +11,6 @@
 #
 # x= 2*x
 
-
 # import matplotlib
 # matplotlib.use('Qt5Agg')
 # # This should be done before `import matplotlib.pyplot`
@@ -23,24 +22,57 @@
 # plt.plot(t, np.sin(t))
 # plt.show()
 
-bruh= 'test(words)'#'hello example (words(more words) here) something'
-var = [char for char in bruh]
-to_remove=[]
-paren_count=0
+# for i,x in enumerate(var):
+#     #print(i,x,paren_count)
+#
+#     if x == "(":
+#         to_remove.append(i)
+#         paren_count+=1
+#     if x == ")":
+#         paren_count-=1
+#     if paren_count > 0:
+#         to_remove.append(i)
+#
+#
+# print(to_remove)
+#
+# print("".join(var))
+
+def move_zeros(array):
+    new=[]
+    zeros=0
+    for x in array:
+        if x==0  and x is not False:
+            zeros+=1
+        else:
+            new.append(x)
+    for x in range(zeros):
+        new.append(0)
+
+    return new
+
+def move_zeros1(array):
+    return sorted(array, key=lambda x: x == 0 and x is not False)
 
 
-for i,x in enumerate(var):
-    #print(i,x,paren_count)
 
-    if x == "(":
-        to_remove.append(i)
-        paren_count+=1
-    if x == ")":
-        paren_count-=1
-    if paren_count > 0:
-        to_remove.append(i)
+print(move_zeros(["a",0,0,"b",None,"c","d",0,1,False,0,1,0,3,[],0,1,9,0,0,{},0,0,9]))
+
+corr = ['a', 'b', None, 'c', 'd', 1, False, 1, 3, [], 1, 9, {}, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+print(move_zeros([0,1,None,2,False,1,0]))
+# [1, None, 2, False, 1, 0, 0]
+
+corr == move_zeros(["a",0,0,"b",None,"c","d",0,1,False,0,1,0,3,[],0,1,9,0,0,{},0,0,9])
 
 
-print(to_remove)
+test=[]
+test.append(False)
+test.append(1)
+test.append(True)
+print(type(False))
 
-print("".join(var))
+x=False
+
+if x==0  and (isinstance(x, int) or isinstance(x, float)):
+    print("yes")
