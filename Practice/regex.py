@@ -39,6 +39,35 @@ def not_braindead(s):
     return "".join(new)
 
 
+"""
+sorted()
+
+I'll state the obvious up front: sorted() returns a list of sorted elements and if we want to sort in a particular way or if we want to sort a complex list of elements (e.g. nested lists or a list of tuples) we can invoke the key argument.
+
+Lambda is a one time use function used to sort a list.
+
+adder_lambda = lambda parameter1,parameter2: parameter1+parameter2
+def adder_regular(parameter1, parameter2): return parameter1+parameter2
+
+"""
+
+def move_zeros(array):
+    new=[]
+    zeros=0
+    for x in array:
+        if x==0  and x is not False:
+            zeros+=1
+        else:
+            new.append(x)
+    for x in range(zeros):
+        new.append(0)
+
+    return new
+
+def move_zeros1(array):
+    return sorted(array, key=lambda x: x == 0 and x is not False)
+
+
 if __name__ == "__main__":
     # print(remove_parentheses("example(unwanted thing)example"))
     # print(remove_parentheses("a(b(c))"))
