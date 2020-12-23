@@ -38,41 +38,54 @@
 #
 # print("".join(var))
 
-def move_zeros(array):
-    new=[]
-    zeros=0
-    for x in array:
-        if x==0  and x is not False:
-            zeros+=1
-        else:
-            new.append(x)
-    for x in range(zeros):
-        new.append(0)
+# def move_zeros(array):
+#     new=[]
+#     zeros=0
+#     for x in array:
+#         if x==0  and x is not False:
+#             zeros+=1
+#         else:
+#             new.append(x)
+#     for x in range(zeros):
+#         new.append(0)
+#
+#     return new
+#
+# def move_zeros1(array):
+#     return sorted(array, key=lambda x: x == 0 and x is not False)
+#
+#
+#
+# print(move_zeros(["a",0,0,"b",None,"c","d",0,1,False,0,1,0,3,[],0,1,9,0,0,{},0,0,9]))
+#
+# corr = ['a', 'b', None, 'c', 'd', 1, False, 1, 3, [], 1, 9, {}, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+#
+# print(move_zeros([0,1,None,2,False,1,0]))
+# # [1, None, 2, False, 1, 0, 0]
+#
+# corr == move_zeros(["a",0,0,"b",None,"c","d",0,1,False,0,1,0,3,[],0,1,9,0,0,{},0,0,9])
+#
+#
+# test=[]
+# test.append(False)
+# test.append(1)
+# test.append(True)
+# print(type(False))
+#
+# x=False
+#
+# if x==0  and (isinstance(x, int) or isinstance(x, float)):
+#     print("yes")
 
-    return new
-
-def move_zeros1(array):
-    return sorted(array, key=lambda x: x == 0 and x is not False)
-
-
-
-print(move_zeros(["a",0,0,"b",None,"c","d",0,1,False,0,1,0,3,[],0,1,9,0,0,{},0,0,9]))
-
-corr = ['a', 'b', None, 'c', 'd', 1, False, 1, 3, [], 1, 9, {}, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-
-print(move_zeros([0,1,None,2,False,1,0]))
-# [1, None, 2, False, 1, 0, 0]
-
-corr == move_zeros(["a",0,0,"b",None,"c","d",0,1,False,0,1,0,3,[],0,1,9,0,0,{},0,0,9])
+def digital_root(n):
+    separate = list(str(n))
+    print(separate)
+    if len(separate) == 1:
+        return separate[0]
+    else:
+        to_int = [int(x) for x in separate]
+        return digital_root(sum(to_int))
 
 
-test=[]
-test.append(False)
-test.append(1)
-test.append(True)
-print(type(False))
 
-x=False
-
-if x==0  and (isinstance(x, int) or isinstance(x, float)):
-    print("yes")
+print(digital_root(16))
