@@ -56,7 +56,17 @@ l1 = [*l2, 2, 4 5, ...]
 """
 
 
+"""
+Numbers and Version Diffs
+"""
 
+# Floor division - rounds down
+//
+
+# or
+import math
+math.floor(x)
+math.ceil(x)
 
 """
 sorted()
