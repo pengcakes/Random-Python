@@ -23,6 +23,14 @@ print(ls[2:])
 # everything from index -2 (index 3 or value 4) to end
 print(ls[-2:])
 
+
+
+# CHECK IF LIST IS EMPTY OR NOT
+
+if list1:
+    print('y/n')
+
+
 """
 Numpy array vs lists: https://learnpython.com/blog/python-array-vs-list/
 
@@ -41,6 +49,10 @@ Iterating intelligently:
 https://docs.python.org/3/library/itertools.html
 
 https://treyhunner.com/2018/10/asterisks-in-python-what-they-are-and-how-to-use-them/
+
+use * to unpact iterables in a list:
+
+l1 = [*l2, 2, 4 5, ...]
 """
 
 
@@ -123,3 +135,36 @@ def digital_root_mine(n):
 
 def digital_root(n):
     return n if n < 10 else digital_root(sum(map(int,str(n))))
+
+
+"""
+Python Sets
+
+-contains immutable and unique items
+-the set itself is mutable
+
+create an empty set: a = set()
+
+
+"""
+
+# ADD FUNCTION ONLY ADDS IF ITEM IS NOT IN LIST
+
+def sum_pairs(lst, s):
+    cache = set()
+    for i in lst:
+        if s - i in cache:
+            return [s - i, i]
+        cache.add(i)
+
+# SAVES RUNTIME NOW YOU DON'T HAVE TO HAVE THE CONDITIONALS
+
+def sum_pairs(ints, s):
+    parsed=[]
+    for x in ints:
+        if x in parsed and x*2 != s:
+            pass
+        elif (s-x) in parsed:
+            return [s-x, x]
+        parsed.append(x)
+    return None

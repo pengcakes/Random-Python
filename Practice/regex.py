@@ -22,7 +22,10 @@
 #
 #         kill_me+=1
 #     return "".join(split)
-
+"""
+Looks like I had to remove parens...
+Fucking hate regex btw
+"""
 
 def not_braindead(s):
     characters = [char for char in s]
@@ -41,7 +44,6 @@ def not_braindead(s):
     return "".join(new)
 
 """ Actual Regex """
-
 def remove_parentheses(s):
     while (t := re.sub(r'\([^()]*\)', '', s)) != s:
         s = t
@@ -54,8 +56,13 @@ def remove_parentheses(s):
 
 
 
+
 if __name__ == "__main__":
     import re
+
+    txt = "The rain in Spain"
+    x = re.search("Portugal", txt)
+    print(x)
     # print(remove_parentheses("example(unwanted thing)example"))
     # print(remove_parentheses("a(b(c))"))
     # print(remove_parentheses("hello example (words(more words) here) something"))

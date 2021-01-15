@@ -1,14 +1,16 @@
-#Austin P Cow Crossing Problem
-################################
+"""
+Austin New n log n
+
+"""
 import time
 sTime = time.time()
 #read file into list
-file = 'data3.txt'
+file = 'data4.txt'
 with open(file) as f:
 	data = f.read().split()
 data = [int(x) for x in data]
 
-num_of_cows = data[0] #N
+num_of_cows = data[0] #N - Unused btw
 num_of_laps = data[1] #L
 course_length = data[2] #C
 
@@ -43,25 +45,23 @@ def main():
 
 # O(nlogn)	598964
 def main2():
-	data.sort()
-	data.reverse()
-	print(data)
+    data.sort()
+    data.reverse()
+    crossing_events = 0
 
-	crossing_events = 0
-	#Y MUST BE BIGGER THAN X
-	for x in data:
-		for y in data:
-			if (y != x and y > x):#avoid repeats and self comparisons
-				#print('x:',x,'y:', y)
-				#print('meets:',compare(time_of_race, x, y, course_length), '\n')
-				crossing_events += compare(time_of_race, x, y, course_length)
-	return crossing_events
+    # problem is that it still iterates through the whole list anyways so still n^2
+    #Y MUST BE BIGGER THAN X
+    # iterates an extra time but saves time overall
+    for x in data:
+        for y in [i for i in data if i>x]:
+            crossing_events += compare(time_of_race, x, y, course_length)
+
+    return crossing_events
 
 
 if __name__ == "__main__":
-	print("\n\n")
-	print('Total meets:', main())
-
-	run_time =  round( (time.time() - sTime), 8)
-	print("--- %s seconds ---" % run_time)
-	print("\n\n")
+    print("\n\n")
+    print('Total meets:', main2())
+    run_time =  round( (time.time() - sTime), 8)
+    print("--- %s seconds ---" % run_time)
+    print("\n\n")
