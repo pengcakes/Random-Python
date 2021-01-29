@@ -2,25 +2,7 @@
 Austin New n log n
 
 """
-import time
-sTime = time.time()
-#read file into list
-file = 'data3.txt'
-with open(file) as f:
-	data = f.read().split()
-data = [int(x) for x in data]
 
-num_of_cows = data[0] #N - Unused btw
-num_of_laps = data[1] #L
-course_length = data[2] #C
-
-total_distance = num_of_laps*course_length
-del data[0], data[0], data[0] #remove first 3
-
-time_of_race = total_distance / max(data) #race ends
-time_of_race = round(time_of_race, 2) #round to 2 places
-#determines how many times y meets x
-#relative velocity
 
 
 
@@ -62,8 +44,28 @@ def main2():
 
 
 if __name__ == "__main__":
-    print("\n\n")
-    print('Total meets:', main2())
-    run_time =  round( (time.time() - sTime), 8)
-    print("--- %s seconds ---" % run_time)
-    print("\n\n")
+	import time
+	sTime = time.time()
+	#read file into list
+	file = 'data3.txt'
+	with open(file) as f:
+		data = f.read().split()
+
+	data = [int(x) for x in data]
+
+	num_of_cows = data[0] #N - Unused btw
+	num_of_laps = data[1] #L
+	course_length = data[2] #C
+
+	total_distance = num_of_laps*course_length
+	del data[0], data[0], data[0] #remove first 3
+
+	time_of_race = total_distance / max(data) #race ends
+	time_of_race = round(time_of_race, 2) #round to 2 places
+	#determines how many times y meets x
+	#relative velocity
+	print("\n\n")
+	print('Total meets:', main2())
+	run_time =  round( (time.time() - sTime), 8)
+	print("--- %s seconds ---" % run_time)
+	print("\n\n")
