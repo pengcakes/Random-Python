@@ -1,8 +1,10 @@
-"""
 https://realpython.com/python3-object-oriented-programming/
 
 https://en.wikibooks.org/wiki/A_Beginner%27s_Python_Tutorial/Importing_Modules
 
 *** Module is a library of importable functions and classes, script is a directly runnable file ***
 
-"""
+**SELF**
+
+"self" represents an instance of the class in reference. "self" gives access to all attributes and methods of the class.
+In Python, self is not a keyword but a parameter. Use it for readability.

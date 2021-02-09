@@ -1,0 +1,32 @@
+--------------------------------------
+Django
+- Open Source Python Web framework
+- Node.js but for Python
+--------------------------------------
+https://docs.djangoproject.com/en/3.1/intro/tutorial01/
+
+
+
+
+
+--------------------------------------
+TESTING
+--------------------------------------
+http://www.rohitschauhan.com/index.php/2018/07/05/python-relative-benefits-of-pytest-unittest-nose-and-doctest/
+
+
+unittest
+- testing framework
+- unittest.TestCase is the base class used to create new test cases
+- testing makes it easier to improve existing code w/o fucking it up
+
+
+
+Nose Tests
+- uses unittest (framework that comes installed with python) to make testing easier
+- understanding testing is important b/c companies use it and for a reason
+
+PyTest
+- alternative to unittest
+- seems to have more documentation
+-
