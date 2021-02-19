@@ -1,8 +1,10 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+***LIST STUFF***
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 """
 List Manipulation
 https://towardsdatascience.com/python-basics-6-lists-and-list-manipulation-a56be62b1f95
-
-
 """
 # index 0,1,2 = 1,2,3
 # index -1,-2,-3 = 5,4,3
@@ -44,7 +46,7 @@ https://blog.teamtreehouse.com/python-single-line-loops
 
 
 """
-Iterating intelligently:
+Iterating Intelligently:
 
 https://docs.python.org/3/library/itertools.html
 
@@ -53,13 +55,51 @@ https://treyhunner.com/2018/10/asterisks-in-python-what-they-are-and-how-to-use-
 use * to unpact iterables in a list:
 
 l1 = [*l2, 2, 4 5, ...]
-"""
 
 
+
+ZIP function - used for parallel iteration over two lists
+
+** be careful of runtime. Creating the list is O(1) but running it is O(NM)
+https://stackoverflow.com/questions/36877715/what-is-the-time-complexity-of-zip-in-python
 """
+
+strings=["cat", "dog", "dog"]
+patterns=["a", "b", "b"]
+
+for x,y in zip(strings, patterns):
+    print(x,y)
+
+print(tuple(zip(strings, patterns)))
+print(type(zip(strings, patterns)))
+
+"""
+ENUMERATE()
+"""
+strings=["cat", "dog", "dog"]
+for count, value in enumerate(strings):
+    print(count," ",value)
+
+"""
+any()
+check if a condition holds for any out of many (an iterable)
+https://stackoverflow.com/questions/52747716/check-list-to-see-if-element-greater-than-specified-number/52747789
+"""
+
+x = 22
+lst = [10, 20, 30]  # do NOT use list as a variable anme
+
+if any(y > x for y in lst):
+    # do stuff with lst
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+***LIST STUFF***
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
 Numbers and Version Diffs
 """
-
 # Floor division - rounds down
 //
 
@@ -98,6 +138,32 @@ def move_zeros1(array):
 
 
 """
+map()
+
+A way to transform each item in an interable w/o having to pull out a loop. Creates a map function somewhere. Also faster than it's equivalent in for loops.
+
+* can also use lambda expression like in sort() *
+
+map(func, list)
+
+ex: map(int, list), map(list, string), map(list, list_w_items)
+
+https://www.w3schools.com/python/ref_func_map.asp
+"""
+
+def digital_root_mine(n):
+    if n < 10:
+        return n
+    else:
+        return digital_root( sum( [int(x) for x in list(str(n))] ) )
+
+def digital_root(n):
+    return n if n < 10 else digital_root(sum(map(int,str(n))))
+
+
+
+
+"""
 More Sorting
 https://docs.python.org/3/howto/sorting.html
 https://www.programiz.com/python-programming/methods/built-in/sorted
@@ -123,28 +189,6 @@ def order_weight(strng):
 def order_weight(_str):
     return ' '.join(sorted( sorted(_str.split(' ')), key=lambda x: sum(int(c) for c in x) ) )
 
-
-"""
-map()
-
-A way to transform each item in an interable w/o having to pull out a loop. Creates a map function somewhere. Also faster than it's equivalent in for loops.
-
-* can also use lambda expression like in sort() *
-
-map(func, list)
-
-ex: map(int, list), map(list, string), map(list, list_w_items)
-
-"""
-
-def digital_root_mine(n):
-    if n < 10:
-        return n
-    else:
-        return digital_root( sum( [int(x) for x in list(str(n))] ) )
-
-def digital_root(n):
-    return n if n < 10 else digital_root(sum(map(int,str(n))))
 
 
 """

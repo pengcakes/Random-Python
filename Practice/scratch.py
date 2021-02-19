@@ -77,15 +77,21 @@
 # if x==0  and (isinstance(x, int) or isinstance(x, float)):
 #     print("yes")
 
-def digital_root(n):
-    separate = list(str(n))
-    print(separate)
-    if len(separate) == 1:
-        return separate[0]
-    else:
-        to_int = [int(x) for x in separate]
-        return digital_root(sum(to_int))
+# def digital_root(n):
+#     separate = list(str(n))
+#     print(separate)
+#     if len(separate) == 1:
+#         return separate[0]
+#     else:
+#         to_int = [int(x) for x in separate]
+#         return digital_root(sum(to_int))
+#
+#
+#
+# print(digital_root(16))
 
 
+x = 25
 
-print(digital_root(16))
+var = [x for x in str(25)]
+print(var)
