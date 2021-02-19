@@ -11,9 +11,14 @@ rcParams['figure.figsize'] = [20, 8]
 
 """
 BETTER WAY TO DO THIS
+
+Lessons learned:
+1. If dependancies need variables make sure the first one called passes them
+2. If running
+
 """
 
-tests=['data.txt', 'data2.txt', 'data3.txt','data4.txt']
+tests=['data2.txt', 'data3.txt','data4.txt']
 runtime_results_1, runtime_results_2=[],[]
 
 for cases in tests:
@@ -35,7 +40,6 @@ for cases in tests:
     #determines how many times y meets x
     #relative velocity
     sTime = time.time()
-    print(time_of_race)
     print('Total meets:', new_test.main2(data, time_of_race, course_length))
     run_time =  round( (time.time() - sTime), 8)
     print("--- %s seconds ---" % run_time)
@@ -73,7 +77,7 @@ for cases in tests:
 title("Runtime Comparison")
 xlabel("Increasingly large test cases.")
 ylabel("Runtime")
-plot(range(0,4), runtime_results_1, 'r', label='nlogn')
+plot(tests, runtime_results_1, 'r', label='nlogn')
 plot(tests, runtime_results_2, 'b', label='n^2')
 legend(loc='upper right')
 

@@ -24,15 +24,25 @@ def main(data, time_of_race, course_length):
 				crossing_events += compare(time_of_race, x, y, course_length)
 	return crossing_events
 
-# O(nlogn)	598964
 def main2(data, time_of_race, course_length):
+	crossing_events = 0
+	#Y MUST BE BIGGER THAN X
+	for x in data:
+		for y in data:
+			if (y != x and y > x):#avoid repeats and self comparisons
+				#print('x:',x,'y:', y)
+				#print('meets:',compare(time_of_race, x, y, course_length), '\n')
+				crossing_events += compare(time_of_race, x, y, course_length)
+	return crossing_events
+
+
+# O(nlogn)	598964
+def main3(data, time_of_race, course_length):
     data.sort()
     data.reverse()
     crossing_events = 0
 
-    # problem is that it still iterates through the whole list anyways so still n^2
-    #Y MUST BE BIGGER THAN X
-    # iterates an extra time but saves time overall
+
     for x in data:
         for y in [i for i in data if i>x]:
             crossing_events += compare(time_of_race, x, y, course_length)

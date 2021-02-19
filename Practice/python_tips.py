@@ -222,3 +222,11 @@ def sum_pairs(ints, s):
             return [s-x, x]
         parsed.append(x)
     return None
+
+
+"""
+NUMPY - Use it
+
+https://towardsdatascience.com/10-numpy-functions-you-should-know-1dc4863764c5
+
+"""
