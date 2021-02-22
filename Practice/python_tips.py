@@ -5,11 +5,15 @@
 """
 List Manipulation
 https://towardsdatascience.com/python-basics-6-lists-and-list-manipulation-a56be62b1f95
+
+Slice Notation:
+https://stackoverflow.com/questions/509211/understanding-slice-notation
+
+Syntax: list[start, stop, step]
 """
 # index 0,1,2 = 1,2,3
 # index -1,-2,-3 = 5,4,3
 ls=[1,2,3,4,5]
-
 
 # slices into indicies 0 - 2 (not including 2)
 # [first:last]
@@ -21,11 +25,14 @@ print(ls[:3])
 # everything from index 2 to end
 print(ls[2:])
 
-
 # everything from index -2 (index 3 or value 4) to end
 print(ls[-2:])
 
+# [1, 3, 5]
+print(ls[::2])
 
+# reverses the list w/ step -1
+print(ls[::-1])
 
 # CHECK IF LIST IS EMPTY OR NOT
 
@@ -95,7 +102,6 @@ if any(y > x for y in lst):
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ***LIST STUFF***
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
 """
 PYTHON IMPORTS
