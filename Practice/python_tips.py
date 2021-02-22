@@ -97,6 +97,13 @@ if any(y > x for y in lst):
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
+"""
+PYTHON IMPORTS
+
+"""
+from runtime_comparison import *
+from runtime_comparison import compare_runtime
+import runtime_comparison as rc
 
 Numbers and Version Diffs
 """
