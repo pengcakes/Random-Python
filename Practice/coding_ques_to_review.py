@@ -7,6 +7,5 @@ CodeSignal:
     - literally fucking my runtime with zip()...
 
 -rotateImage
-    - need to understand runtime better
-
+    - review how O(1) runtime is achieved
 """
