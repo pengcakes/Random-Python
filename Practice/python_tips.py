@@ -3,6 +3,26 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """
+First off, all the different TYPES of DATA STORAGE
+
+LISTS, SETS, TUPLES
+
+LISTS - Mutable and unordered. Items in list can be replaced or changed. Defined by [].
+TUPLES - Immutable and ordered. Items in set cannot be changed or replaced. Defined by ().
+SET - Mutable and unordered but w/ no duplicate items. Items in set cannot be changed or replaced. Defined by set([]).
+
+Sample code here:
+https://www.geeksforgeeks.org/difference-between-list-vs-set-vs-tuple-in-python/
+
+SET uses add and remove instead:
+https://www.datacamp.com/community/tutorials/sets-in-python
+
+"""
+
+
+
+
+"""
 List Manipulation
 https://towardsdatascience.com/python-basics-6-lists-and-list-manipulation-a56be62b1f95
 
