@@ -52,10 +52,11 @@ print(ls[-2:])
 print(ls[::2])
 
 # reverses the list w/ step -1
+# same effect as ls.reverse() and reversed(ls)
 print(ls[::-1])
 
-# CHECK IF LIST IS EMPTY OR NOT
 
+# CHECK IF LIST IS EMPTY OR NOT
 if list1:
     print('y/n')
 
