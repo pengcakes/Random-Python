@@ -121,8 +121,24 @@ if any(y > x for y in lst):
     # do stuff with lst
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-***LIST STUFF***
+***LIST STUFF END***
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""
+DEBUGGING
+
+
+use assert
+"""
+x=12
+y="12"
+
+# print statement won't catch this ^^
+# below will raise an assert error, faster and easier than printing
+# won't do anything if true.
+assert x==y
+
+
 
 """
 PYTHON IMPORTS
