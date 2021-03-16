@@ -82,7 +82,11 @@ https://treyhunner.com/2018/10/asterisks-in-python-what-they-are-and-how-to-use-
 
 use * to unpact iterables in a list:
 
-l1 = [*l2, 2, 4 5, ...]
+    >>> fruits = ['lemon', 'pear', 'watermelon', 'tomato']
+    >>> print(fruits[0], fruits[1], fruits[2], fruits[3])
+    lemon pear watermelon tomato
+    >>> print(*fruits)
+    lemon pear watermelon tomato
 
 
 
@@ -101,6 +105,13 @@ for x,y in zip(strings, patterns):
 print(tuple(zip(strings, patterns)))
 print(type(zip(strings, patterns)))
 
+
+# you can also use them together to transpose a 2D array
+
+transposed_zip_file = zip(*list)
+
+
+
 """
 ENUMERATE()
 """
@@ -112,6 +123,12 @@ for count, value in enumerate(strings):
 any()
 check if a condition holds for any out of many (an iterable)
 https://stackoverflow.com/questions/52747716/check-list-to-see-if-element-greater-than-specified-number/52747789
+
+or it may be simpler to use:
+
+if blah not in list:
+    pass
+
 """
 
 x = 22
