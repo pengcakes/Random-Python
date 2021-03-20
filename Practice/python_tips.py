@@ -180,6 +180,8 @@ math.floor(x)
 math.ceil(x)
 
 """
+
+"""
 sorted()
 
 I'll state the obvious up front: sorted() returns a list of sorted elements and if we want to sort in a particular way or if we want to sort a complex list of elements (e.g. nested lists or a list of tuples) we can invoke the key argument.
