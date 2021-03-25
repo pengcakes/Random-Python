@@ -35,3 +35,29 @@ def fileNaming(names):
     return ans
 
 """
+
+
+"""
+Is this a prime number?
+
+"""
+
+# method 1: check every number before
+
+def one(n):
+    for x in range(2,n):
+        if n % x == 0:
+            return False
+    return True
+
+# method 1 is O(n) we can do better
+# method 2 only checks sqrt(n) cause everything after that is already checked factor wise.
+import math
+def two(n):
+    for x in range(2, int(math.sqrt(n))):
+        if n % x == 0:
+            return False
+    return True
+
+print(one(17))
+print(two(17))
