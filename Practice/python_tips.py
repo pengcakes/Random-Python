@@ -164,14 +164,23 @@ assert x==y
 """
 PYTHON IMPORTS
 
-"""
 from runtime_comparison import *
 from runtime_comparison import compare_runtime
 import runtime_comparison as rc
 
 Numbers and Version Diffs
+
 """
-# Floor division - rounds down
+
+
+
+
+
+
+
+
+"""
+# FLOOR DIVISION - rounds down
 //
 
 # or
@@ -180,6 +189,12 @@ math.floor(x)
 math.ceil(x)
 
 """
+
+
+
+
+
+
 
 """
 sorted()

@@ -8,6 +8,8 @@ CodeSignal:
 
 -rotateImage
     - review how O(1) runtime is achieved
+    - https://leetcode.com/problems/rotate-image/discuss/18884/Seven-Short-Solutions-(1-to-7-lines)
+    - good examples of pythonic solutions above
 """
 
 
