@@ -318,3 +318,76 @@ NUMPY - Use it
 https://towardsdatascience.com/10-numpy-functions-you-should-know-1dc4863764c5
 
 """
+
+
+"""
+DECORATORS
+
+Basically including function 'A' (as an object) in function 'B'
+Applies a function to another function when ran.
+This is one way to quickly improve functionality to an existing function.
+
+"""
+def make_pretty(func):
+    def inner():
+        print("I got decorated")
+        func()
+    return inner
+
+
+def ordinary():
+    print("I am ordinary")
+
+ordinary()
+pretty = make_pretty(ordinary)
+pretty()
+# compared to:
+
+@make_pretty
+def ordinary():
+    print("I am ordinary")
+
+ordinary()
+
+# another example:
+
+def star(func):
+    def inner(*args, **kwargs):
+        print("*" * 30)
+        func(*args, **kwargs)
+        print("*" * 30)
+    return inner
+
+
+def percent(func):
+    def inner(*args, **kwargs):
+        print("%" * 30)
+        func(*args, **kwargs)
+        print("%" * 30)
+    return inner
+
+
+@star
+@percent
+def printer(msg):
+    print(msg)
+
+
+printer("Hello")
+
+
+def star(func):
+    def inner(*args, **kwargs):
+        print("*" * 30)
+        func(*args, **kwargs)
+        print("*" * 30)
+    return inner
+
+@star
+def print_names(list_of_names):
+    for x in list_of_names:
+        print(x)
+
+
+names=['james', 'jordan','jeffery']
+print_names(names)

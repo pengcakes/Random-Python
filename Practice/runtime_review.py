@@ -37,10 +37,6 @@ If drawn out a balanced binary tree, the height of the tree(which represents the
 
 
 
-
-
-
-
 """
 RUNTIME IMPROVEMENTS
 """
