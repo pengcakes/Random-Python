@@ -1,3 +1,14 @@
+import timer
+
+@timer
+def factorial(n):
+    return n * factorial(n-1) if n else 1
+
+for x in range(0, 20):
+    print(x, factorial(x))
+
+
+
 # %matplotlib inline
 # %conifg InlineBackend.figure_format = "svg"
 #
@@ -89,9 +100,3 @@
 #
 #
 # print(digital_root(16))
-
-
-x = 25
-
-var = [x for x in str(25)]
-print(var)
