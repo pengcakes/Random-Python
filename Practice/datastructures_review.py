@@ -29,9 +29,6 @@ will continue to stack key-value pairs. The hash function returns the index
 and you go through each node until you find the right key.
 
 
-
-
-
 Ex: Sum of Pairs
 More Ex:
 https://stackoverflow.com/questions/5900578/how-does-collections-defaultdict-work
@@ -40,22 +37,19 @@ https://realpython.com/python-defaultdict/
 Editing a dict:
 https://www.programiz.com/python-programming/methods/dictionary
 """
-# REGULAR DICT FIRST
-
+# Regular Dictionary
 name="DictTest"
 d={}
 
-# checking if key is already in dict
+# adding to a "count" dictionary.
 for x in name:
     if x not in d:
         d[x]=1
     else:
         d[x]+=1
-
 print(d)
 
 # DefaultDict
-
 from collections import defaultdict
 
 # any new key gets a default value of zero.
@@ -64,10 +58,18 @@ dd=defaultdict(int)
 
 for x in name:
     dd[x]=+1
-
 print(dd)
-
 
 # can also sepecify default value
 # same as above, but starting at 2 instead of zero
 dd2= defaultdict(lambda:2)
+
+
+"""
+Trees
+
+BST-
+
+
+
+"""
