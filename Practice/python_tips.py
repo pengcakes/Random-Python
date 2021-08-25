@@ -144,12 +144,20 @@ if any(y > x for y in lst):
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ***LIST STUFF END***
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""
+String Manipulation
+https://realpython.com/python-f-strings/
+
+New way to format strings. Use f"sdlfkfsdkl {var}" instead of "string {var}".format(var=something)
+
+"""
+
 
 """
 DEBUGGING
 
-
 use assert
+refer to Python-Testing project for examples in pytest + unittesting
 """
 x=12
 y="12"
@@ -391,3 +399,10 @@ def print_names(list_of_names):
 
 names=['james', 'jordan','jeffery']
 print_names(names)
+
+
+"""
+COOL SHIT I HAVE YET TO SORT
+
+https://medium.com/analytics-vidhya/dict-attribute-and-vars-function-in-python-42d82dbaba73
+"""

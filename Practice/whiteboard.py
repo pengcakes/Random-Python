@@ -1,3 +1,27 @@
+
+# Python program to demonstrate
+# selenium
+
+# # import webdriver
+# from selenium import webdriver
+# # create webdriver object
+# driver = webdriver.Firefox(executable_path=r"C:\Users\14\Documents\GeckoDriver\geckodriver.exe")
+# # get google.co.in
+# driver.get("https://google.com")
+
+
+# chrome test - chrome is faster
+
+# import webdriver
+from selenium import webdriver
+# create webdriver object
+driver = webdriver.Chrome(r"C:\Users\14\Documents\ChromeDriver\chromedriver.exe")
+# get google.co.in
+driver.get("https://google.com")
+
+
+
+
 def bruh(number):
     return number%2 == 0
 
